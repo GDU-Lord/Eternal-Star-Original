@@ -1,0 +1,14 @@
+<span *ngFor="let span of spans">
+  <ng-container *ngIf="span.type === 'text'">
+    {{ span.content }}
+  </ng-container>
+  <ng-container *ngIf="span.type === 'link'">
+    <a *ngIf="!span.data[2]" [routerLink]="span.data[0]" [fragment]="span.data[1]">
+      {{ span.content }}
+    </a>
+    <a *ngIf="span.data[2]" [href]="span.data[0]">
+      {{ span.content }}
+    </a>
+  </ng-container>
+  <img *ngIf="span.type === 'image'" [src]="span.content">
+</span>

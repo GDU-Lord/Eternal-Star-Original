@@ -1,0 +1,86 @@
+@import '../../../config'
+  
+.list-type-0
+  list-style: initial
+.list-type-1
+  list-style: circle
+.list-type-2
+  list-style: square
+
+.main
+  color: $bw5
+
+h1
+  color: $color5
+
+h2
+  text-decoration: underline
+  color: $bw4
+
+h3
+  color: $bw4
+
+h4
+  text-decoration: underline
+  color: $bw4
+
+p
+  text-align: justify
+
+@media ( max-width: $mobile_screen )
+  .list-type-0
+    margin-left: 0
+  .list-type-1
+    margin-left: 2vw
+  .list-type-2
+    margin-left: 4vw
+
+  .main
+    padding: 5vw
+
+  h1
+    font-size: $font1*$to_vw
+
+  h2
+    font-size: $font2*$to_vw
+
+  h3
+    font-size: $font3*$to_vw
+
+  h4
+    font-size: $font4*$to_vw
+
+  p
+    font-size: $font5*$to_vw
+
+  ul
+    font-size: $font5*$to_vw
+
+@media ( min-width: $mobile_screen )
+  .list-type-0
+    margin-left: 0
+  .list-type-1
+    margin-left: 20px
+  .list-type-2
+    margin-left: 40px
+
+  .main
+    padding: 50px
+
+  h1
+    font-size: $font1*1px
+
+  h2
+    font-size: $font2*1px
+
+  h3
+    font-size: $font3*1px
+
+  h4
+    font-size: $font4*1px
+
+  p
+    font-size: $font5*1px
+
+  ul
+    font-size: $font5*1px

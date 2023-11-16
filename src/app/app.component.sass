@@ -1,0 +1,43 @@
+@import '../config'
+
+.app
+  min-height: 100vh
+  padding: 0
+  margin: auto
+  box-sizing: border-box
+  background-image: url('/assets/bg/space1.jpg')
+  background-size: cover
+  background-attachment: fixed
+  .cover
+    .title
+      width: 100%
+      color: $color5
+      box-sizing: border-box
+      padding: 20px
+      background: $bg_color2
+  .content
+    padding: 5px
+    margin: auto
+    text-align: cetner
+    background: $bg_color1
+
+@media ( max-width: $mobile_screen )
+  .app
+    width: 90vw
+    .cover
+      .title
+        box-sizing: border-box
+        font-size: $font2*$to_vw
+        overflow: hidden
+    .content
+      width: 90vw
+      // padding-right: 2vw
+
+@media ( min-width: $mobile_screen )
+  .app
+    .cover
+      .title
+        height: 200px
+        font-size: $font1*1.5px
+    .content
+      width: 900px

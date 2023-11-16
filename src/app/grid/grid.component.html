@@ -1,0 +1,9 @@
+<div class="main">
+  <div class="content container-lg">
+    <div *ngFor="let row of grid" class="row">
+      <div *ngFor="let item of row" class="col-lg-4 col-sm-12 column-container">
+        <app-item [item]="item"></app-item>
+      </div>
+    </div>
+  </div>
+</div>

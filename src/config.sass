@@ -1,0 +1,34 @@
+$color1: #0c1e42
+$color2: #24427d
+$color3: #3a849f
+$color4: #8de6bc
+$color5: #f2ff43
+
+$bg_color1: #0c1e42b0
+$bg_color2: #24427db0
+$bg_color3: #3a849fb0
+$bg_color4: #8de6bcb0
+$bg_color5: #f2ff43b0
+
+$bw1: #000000
+$bw2: #404040
+$bw3: #808080
+$bw4: #c0c0c0
+$bw5: #ffffff
+
+$font1: 60
+$font2: 45
+$font3: 35
+$font4: 25
+$font5: 25
+
+$to_vw: 0.2vw
+$to_vh: 0.1vh
+
+$mobile_screen: 950px
+
+@mixin gradient($direction, $list)
+  background: -webkit-linear-gradient($direction, $list)
+  background: -moz-linear-gradient($direction, $list)
+  background: -o-linear-gradient($direction, $list)
+  background: linear-gradient($direction, $list)

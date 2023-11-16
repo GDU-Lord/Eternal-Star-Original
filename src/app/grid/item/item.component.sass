@@ -1,0 +1,50 @@
+@import '../../../config'
+
+$grid-bg: $color1
+
+.main
+  position: relative
+  background-color: $grid-bg
+  cursor: pointer
+  color: $bw4
+  box-shadow: 0px 0px 5px $bw5
+  background-repeat: no-repeat
+  background-position: center
+  overflow: hidden
+  .container
+    color: $bw4
+    padding: 0
+    .title
+      background-color: $bg_color1
+      position: absolute
+      bottom: 0
+
+@media ( max-width: $mobile_screen )
+  .main
+    width: 100%
+    height: 50vw
+    border-radius: 1vw 1vw
+    margin-bottom: 4vw
+    .container
+      width: 100%
+      height: 100%
+      .title
+        font-size: $font3*$to_vw
+        width: 100%
+        padding: 0px 2vw
+
+@media ( min-width: $mobile_screen )
+  .main
+    width: 100%
+    height: 250px
+    transition: all 0.1s ease-in
+    border-radius: 5px 5px
+    &:hover
+      transform: scale(1.07)
+    .container
+      width: 100%
+      height: 100%
+      .title
+        font-size: $font3*1px
+        width: 100%
+        padding: 0px 20px

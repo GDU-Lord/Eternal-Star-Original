@@ -1,0 +1,12 @@
+<div [ngStyle]="{ 'background-image': 'url(\'' + item.image + '\')', 'background-size': item.contain ? 'contain' : 'cover'}" class="main">
+  <a *ngIf="!item.external" [routerLink]="item.link">
+    <div class="container">
+      <div class="title">{{item.title}}</div>
+    </div>
+  </a>
+  <a *ngIf="item.external" [href]="item.link">
+    <div class="container">
+      <div class="title">{{item.title}}</div>
+    </div>
+  </a>
+</div>

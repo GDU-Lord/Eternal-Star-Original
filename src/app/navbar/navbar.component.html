@@ -1,0 +1,8 @@
+<div class="main container-lg">
+  <div class="row">
+    <a [routerLink]="'/'" class="button col-4" [class]="getSelected('/')">Головна</a>
+    <a [routerLink]="'/articles'" class="button col-4" [class]="getSelected('/articles', '/article')">Статті</a>
+    <a [routerLink]="'/gallery'" class="button col-4" [class]="getSelected('/gallery')">Галерея</a>
+    <!-- <a [routerLink]="'/about'" class="button col-" [class]="route === '/about' ? 'selected' : ''">Про</a> -->
+  </div>
+</div>

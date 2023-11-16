@@ -1,0 +1,22 @@
+<div class="main">
+  <h1 class="title">{{ article.title }}</h1>
+  <div *ngFor="let element of article.elements" [id]="element.id">
+    <h2 *ngIf="element.type === 'h2'">
+      <app-span [spans]="element.spans"></app-span>
+    </h2>
+    <h3 *ngIf="element.type === 'h3'">
+      <app-span [spans]="element.spans"></app-span>
+    </h3>
+    <h4 *ngIf="element.type === 'h4'">
+      <app-span [spans]="element.spans"></app-span>
+    </h4>
+    <p *ngIf="element.type === 'text'">
+      <app-span [spans]="element.spans"></app-span>
+    </p>
+    <ul [class]="'list-type-'+element.level" *ngIf="element.type === 'list'">
+      <li *ngFor="let item of element.list">
+        <app-span [spans]="item.spans"></app-span>
+      </li>
+    </ul>
+  </div>
+</div>

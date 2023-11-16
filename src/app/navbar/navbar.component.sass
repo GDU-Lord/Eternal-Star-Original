@@ -1,0 +1,29 @@
+@import '../../config'
+
+.main
+  .row
+    margin: auto
+    .button
+      color: $color4
+      text-decoration: none
+      background: $color3
+      text-align: center
+      transition: background 0.2s
+      &:hover
+        background: $color4
+        color: $color2
+    .selected
+      background: $color5
+      color: $color1
+
+@media ( max-width: $mobile_screen )
+  .main
+    font-size: $font4*$to_vw
+    .row
+      width: 90vw
+
+@media ( min-width: $mobile_screen )
+  .main
+    font-size: $font2*1px
+    .row
+      width: 900px

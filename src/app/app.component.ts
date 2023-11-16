@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GridComponent } from './grid/grid.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'wiki';
+  ngOnInit() {
+    this.test();
+  }
+  test() {
+    
+  }
 }
