@@ -25,5 +25,3 @@ export function isFileName(url: string, extensions: string[]): boolean {
 export function getCurrentIP() {
   return window.location.hostname; // if domain added, must be read from a custom config file
 }
-
-export const CURRENT_IP = getCurrentIP();
