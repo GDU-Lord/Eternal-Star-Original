@@ -25,3 +25,9 @@ export function isFileName(url: string, extensions: string[]): boolean {
 export function getCurrentIP() {
   return window.location.hostname; // if domain added, must be read from a custom config file
 }
+
+export function convertArticleURL(url: string): string | null {
+  if(url == null) return null;
+  const res = "/articles/" + url;
+  return collapseURL(res);
+}

@@ -4,8 +4,9 @@ import { Observable, Subject } from 'rxjs';
 import { API_URL } from 'src/config';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "any"
 })
+
 export class HttpService {
 
   constructor(

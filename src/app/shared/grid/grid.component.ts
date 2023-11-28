@@ -3,7 +3,7 @@ import { Observable, Subject, takeUntil } from 'rxjs';
 import { GRID_COLUMNS } from 'src/config';
 
 @Component({
-  selector: 'app-grid',
+  selector: 'shared-grid',
   templateUrl: './grid.component.html',
   styleUrls: ['./grid.component.sass']
 })

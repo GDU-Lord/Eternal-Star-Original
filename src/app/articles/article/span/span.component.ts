@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { API_URL } from 'src/config';
-import { convertImageURL } from 'src/utils';
+import { convertArticleURL, convertImageURL } from 'src/utils';
 
 @Component({
-  selector: 'app-span',
+  selector: 'article-span',
   templateUrl: './span.component.html',
   styleUrls: ['./span.component.sass']
 })
@@ -20,7 +20,7 @@ export class SpanComponent implements OnInit {
           delete span.data[1];
         span.data[2] = span.data[0].match(/https{0,1}:\/{2}/) != null; // isExternalLink
         if(!span.data[2])
-          span.data[0] = "/article/" + span.data[0];
+          span.data[0] = convertArticleURL(span.data[0]);
         continue;
       }
       if(span.type === "image") {

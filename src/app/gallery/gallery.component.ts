@@ -1,12 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router, UrlSegment } from '@angular/router';
 import { BehaviorSubject, Observable, Subject, of, takeUntil } from 'rxjs';
-import { HttpService } from 'src/app/services/http.service';
+import { HttpService } from 'src/app/shared/services/http.service';
 import { FOLDER_GRID_IMAGE } from 'src/config';
 import { convertGalleryURL, isFileName } from 'src/utils';
 
 @Component({
-  selector: 'app-gallery',
+  selector: 'gallery-root',
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.sass']
 })

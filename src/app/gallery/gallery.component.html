@@ -1,0 +1,2 @@
+<shared-grid *ngIf="currentImages.length !== 1" [items]="images$"></shared-grid>
+<gallery-image *ngIf="currentImages.length === 1" [src]="currentImages[0].image"></gallery-image>

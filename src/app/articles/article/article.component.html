@@ -2,20 +2,20 @@
   <h1 class="title">{{ article.title }}</h1>
   <div *ngFor="let element of article.elements" [id]="element.id">
     <h2 *ngIf="element.type === 'h2'">
-      <app-span [spans]="element.spans"></app-span>
+      <article-span [spans]="element.spans"></article-span>
     </h2>
     <h3 *ngIf="element.type === 'h3'">
-      <app-span [spans]="element.spans"></app-span>
+      <article-span [spans]="element.spans"></article-span>
     </h3>
     <h4 *ngIf="element.type === 'h4'">
-      <app-span [spans]="element.spans"></app-span>
+      <article-span [spans]="element.spans"></article-span>
     </h4>
     <p *ngIf="element.type === 'text'">
-      <app-span [spans]="element.spans"></app-span>
+      <article-span [spans]="element.spans"></article-span>
     </p>
     <ul [class]="'list-type-'+element.level" *ngIf="element.type === 'list'">
       <li *ngFor="let item of element.list">
-        <app-span [spans]="item.spans"></app-span>
+        <article-span [spans]="item.spans"></article-span>
       </li>
     </ul>
   </div>

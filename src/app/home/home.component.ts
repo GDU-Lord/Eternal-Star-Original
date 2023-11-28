@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
-import { HttpService } from 'src/app/services/http.service';
+import { HttpService } from 'src/app/shared/services/http.service';
 
 @Component({
   selector: 'app-home',

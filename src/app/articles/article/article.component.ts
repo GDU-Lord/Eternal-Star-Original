@@ -1,10 +1,10 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
-import { HttpService } from 'src/app/services/http.service';
+import { HttpService } from 'src/app/shared/services/http.service';
 
 @Component({
-  selector: 'app-article',
+  selector: 'article-root',
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.sass']
 })

@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-image',
+  selector: 'gallery-image',
   templateUrl: './image.component.html',
   styleUrls: ['./image.component.sass']
 })

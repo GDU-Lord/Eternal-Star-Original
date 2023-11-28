@@ -1,10 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Observable, Subject, of, takeUntil } from 'rxjs';
-import { HttpService } from 'src/app/services/http.service';
-import { convertImageURL } from 'src/utils';
+import { HttpService } from 'src/app/shared/services/http.service';
+import { convertArticleURL, convertImageURL } from 'src/utils';
 
 @Component({
-  selector: 'app-articles',
+  selector: 'articles-root',
   templateUrl: './articles.component.html',
   styleUrls: ['./articles.component.sass']
 })
@@ -25,7 +25,7 @@ export class ArticlesComponent implements OnInit, OnDestroy {
         const articles = (res as any[]).map(item => ({
           title: item?.title ?? "",
           id: item?.id ?? "",
-          link: "/article/" + item?.id,
+          link: convertArticleURL(item?.id)!,
           image: convertImageURL(item.images[0]) ?? ""
         }));
         this.articles.next(articles);

@@ -1,22 +1,13 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes, UrlSegment } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { ArticleComponent } from './pages/article/article.component';
-import { ArticlesComponent } from './pages/articles/articles.component';
-import { GalleryComponent } from './pages/gallery/gallery.component';
-
-function galleryMatcher(url: UrlSegment[]) {
-  if(url[0].path === "gallery") return { consumed: url };
-  return null;
-}
+import { RouterModule, Routes } from '@angular/router';
+import { HomeModule } from './home/home.module';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'articles', component: ArticlesComponent },
-  { path: 'article/:id', component: ArticleComponent },
-  { path: 'gallery', component: GalleryComponent },
-  { matcher: galleryMatcher, component: GalleryComponent },
-  { path: 'about', component: HomeComponent },
+  // { path: '', loadChildren: () => import("./articles/articles.module").then(m => m.ArticlesModule) },
+  // { path: 'articles', loadChildren: () => ArticlesModule },
+  { path: 'articles', loadChildren: () => import("./articles/articles.module").then(m => m.ArticlesModule) },
+  { path: 'gallery', loadChildren: () => import("./gallery/gallery.module").then(m => m.GalleryModule) },
+  { path: '', loadChildren: () => HomeModule },
 ];
 
 @NgModule({
